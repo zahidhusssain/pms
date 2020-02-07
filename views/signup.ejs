@@ -1,0 +1,59 @@
+<%-include('header1')%>
+    <div class="container">
+      <div class="row">
+        <h2 class="text-center"><%= title%></h2>
+          <div id="signupbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+              <div class="panel panel-info">
+                  <div class="panel-heading">
+                      <div class="panel-title">Signup Form</div>
+                       </div>  
+                  <div class="panel-body" >
+                 
+                  <form action="/signup" id="signupForm" class="form-horizontal" method="post"  role="form" >
+                    <% if(msg !=''){ %>
+                            <p style="text-align: center; color: green;">
+                              <%= msg %></p>
+                          
+                          <% } %>
+                          
+                              
+                          <div class="form-group">
+                              <label for="uname" class="col-md-3 control-label">User Name</label>
+                              <div class="col-md-9">
+                                  <input type="text" class="form-control" name="uname" placeholder="Enter Your User Name" required>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="email" class="col-md-3 control-label">User Email</label>
+                            <div class="col-md-9">
+                                <input type="email" class="form-control" name="email" placeholder="Enter User Email"required>
+                            </div>
+                        </div>
+                          <div class="form-group">
+                            <% if(errors !='') { %>
+                              <p style="text-align: center; color:aqua;"> <%= errors.password.msg %> </p>
+                             <% } %>
+                            <label for="password" class="col-md-3 control-label">Password</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" name="password" placeholder="Enter Your Password"required>
+                                <p style="text-align: center; color:royalblue;">Your Password must be equal or greater then 8 Digit</p>
+                            </div>
+                            </div>
+                            <div class="form-group">
+                              <label for="confirmpassword" class="col-md-3 control-label">Confirm Password</label>
+                              <div class="col-md-9">
+                                  <input type="password" class="form-control" name="confirmpassword" placeholder="Enter Your Password Again" required>
+                              </div>
+                              </div>
+                            <div class="form-group">
+                            <div class="col-md-offset-3 col-md-9">
+                            <button type="submit" class="btn btn-primary " value="signup">Signup</button>
+                            </div></div>
+                            <p class="ex" >   If You  have Already account ?<a class="ex" href="/">Login Here</a></p>
+                          </form>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+ <%-include('footer')%>
