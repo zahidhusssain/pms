@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 var mongoosePaginate = require('mongoose-paginate');
-mongoose.connect('mongodb://localhost:27017/pms', {useNewUrlParser: true , useCreateIndex:true,});
+mongoose.connect('mongodb+srv://pms:<password>@pms-pamze.mongodb.net/test', {useNewUrlParser: true , useCreateIndex:true,});
+//mongodb+srv://pms:<password>@pms-pamze.mongodb.net/test
 var conn=mongoose.Collection;
 var passSchema= new mongoose.Schema({
 password_category:{

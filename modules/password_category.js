@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
-
-mongoose.connect('mongodb://localhost:27017/pms', {useNewUrlParser: true , useCreateIndex:true,});
+//mongodb+srv://pms:<password>@pms-pamze.mongodb.net/test
+//mongodb://localhost:27017/pms
+mongoose.connect('mongodb+srv://pms:<password>@pms-pamze.mongodb.net/test', {useNewUrlParser: true , useCreateIndex:true,});
 var conn=mongoose.Collection;
 var passcatSchema= new mongoose.Schema({
     
